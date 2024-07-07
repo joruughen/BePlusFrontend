@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const BACKEND_URL = 'http://44.197.238.7:8080'; //Spring Boot
+const BACKEND_URL = 'http://localhost:8080'; //Spring Boot
 
 const header = () => {
     const token = localStorage.getItem('token');
@@ -39,7 +39,6 @@ export const fetchGetAlgo = async () => {
     const config = header();
     return await axios.get(``, config);
 }
-
 
 export const fetchUpdate = async (body) => {
     const config = header();

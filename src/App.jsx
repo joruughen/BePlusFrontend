@@ -5,8 +5,9 @@ import {
     Route,
     Navigate } from 'react-router-dom'
 import { Navbar } from './layout/Navbar'
+
 import { Login } from './pages/Login'
-import { Register } from './pages/Register'
+import {Register} from './pages/Register'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 
@@ -14,6 +15,7 @@ import { NotFound } from './pages/NotFound'
 function App() {
     return (
         <>
+
             <Router>
                 <Navbar/>
                 <Routes>
