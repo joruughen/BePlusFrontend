@@ -2,14 +2,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SideBar from '../layout/SideBar';
-import Home from './Home';
+import {Home} from './Home';
 import MyRocky from './MyRocky';
 import Account from './Account';
 import HabitTracker from './HabitTracker';
-import RestModule from './SupportModules/RestModule';
-import MeditationModule from './SupportModules/MeditationModule';
-import SystemModule from './SupportModules/SystemModule';
-import NotFound from './NotFound';
+import RestModule from './RestModule';
+import MeditationModule from './MeditationModule';
+import SystemModule from './SystemModule';
+import {NotFound} from './NotFound';
 
 const Dashboard = () => {
     return (
