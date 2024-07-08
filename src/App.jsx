@@ -11,6 +11,7 @@ import {Register} from './pages/Register'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { Rockie } from './pages/Rockie.jsx'
+import {Store} from "./pages/Store.jsx";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/auth/register" element={<Register/>} />
                     <Route path="/home" element={<Home/>} />
                     <Route path="/rockie" element={<Rockie />} />
+                    <Route path="/store" element={<Store />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>
