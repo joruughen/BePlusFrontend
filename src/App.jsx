@@ -10,6 +10,7 @@ import { Login } from './pages/Login'
 import {Register} from './pages/Register'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
+import { Rockie } from './pages/Rockie.jsx'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/auth/login" element={<Login/>} />
                     <Route path="/auth/register" element={<Register/>} />
                     <Route path="/home" element={<Home/>} />
+                    <Route path="/rockie" element={<Rockie />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>

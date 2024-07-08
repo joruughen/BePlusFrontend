@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {fetchLogin} from "../services/api.js";
+import { fetchLogin } from '../services/api.js';
+import secureStorage from '../../secureStorage.js';
 
 export default function LogInForm() {
     const [formData, setFormData] = useState({
@@ -24,15 +25,19 @@ export default function LogInForm() {
         try {
             console.log('Form Data:', formData);
             const response = await fetchLogin(formData);
-            console.log('Form Data:', formData);
+            console.log('Response:', response);
             // Manejar la respuesta de inicio de sesión aquí
             if (response.status === 200) {
-                console.log('Form Data:', formData);
-                console.log('Hola')
+                const token = response.data.token;
+                console.log('Token:', token);
+                // Guardar el token de forma segura
+                secureStorage.setItem('token', token);
+                console.log('Token saved to secure storage');
+                // Navegar a otra página después de iniciar sesión con éxito
+                navigate('/rockie');
             }
         } catch (error) {
-
-            console.error("Error en el inicio de sesión:", error);
+            console.error('Error en el inicio de sesión:', error);
         }
     };
 
@@ -102,8 +107,6 @@ export default function LogInForm() {
                             </button>
                         </div>
                     </form>
-
-
                 </div>
             </div>
         </>
