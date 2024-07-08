@@ -7,10 +7,10 @@ export const Home = () => {
         <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
             <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
                 <h1 className="text-3xl font-bold text-center text-gray-900 mb-6">
-                    Welcome to Our Application
+                    Bienvenido a B+
                 </h1>
                 <p className="text-center text-gray-600 mb-6">
-                    Please sign in or create an account to continue.
+                    Logeate o crea una cuenta
                 </p>
                 <div className="flex justify-center space-x-4">
                     <Link to="/auth/login">
